@@ -21,6 +21,10 @@ public interface UserRep extends JpaRepository<User, Integer> {
 
 	User save(User user);
 
+	Optional<User> findUserByFirstName(String firstName);
+
+	//Optional<User> findByEmail(String email);
+
 	//Optional<User> findByEmail(String email);
 
 	

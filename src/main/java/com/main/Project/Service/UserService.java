@@ -1,6 +1,7 @@
 package com.main.Project.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.main.Project.Entity.User;
 
@@ -21,6 +22,11 @@ public interface UserService {
 
 
 	List<User> listAllUser();
+
+
+
+
+	//Optional<User> getUserByFirstName(String firstName);
 
 
 }

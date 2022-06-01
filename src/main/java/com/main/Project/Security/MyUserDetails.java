@@ -28,35 +28,69 @@ public class MyUserDetails implements UserDetails {
 				.map(SimpleGrantedAuthority::new)
 				.collect(Collectors.toList());
 	}
-	
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return authorities;
+
+	public String getUserName() {
+		return userName;
 	}
-	@Override
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	public String getPassword() {
 		return password;
 	}
-	@Override
-	public String getUsername() {
-		return userName;
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	@Override
-	public boolean isAccountNonExpired() {
-		return true;
-	}
-	@Override
-	public boolean isAccountNonLocked() {
-		return true;
-	}
-	@Override
-	public boolean isCredentialsNonExpired() {
-		return true;
-	}
-	@Override
-	public boolean isEnabled() {
+
+	public boolean isActive() {
 		return active;
 	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public List<GrantedAuthority> getAuthorities() {
+		return authorities;
+	}
+
+	public void setAuthorities(List<GrantedAuthority> authorities) {
+		this.authorities = authorities;
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
 	
 }

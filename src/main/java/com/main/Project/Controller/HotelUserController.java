@@ -66,6 +66,7 @@ public class HotelUserController
 			return new ResponseEntity<User>(userService.updateUser( id, user), HttpStatus.OK);
 			
 		}
+		
 
 	
 }
